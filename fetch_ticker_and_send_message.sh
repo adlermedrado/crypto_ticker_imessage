@@ -11,7 +11,14 @@ if [ -z "$RESPONSE" ]; then
   exit 1
 fi
 
-FORMATTED_DATA=$(echo "$RESPONSE" | jq '.[] | "\(.pair) -  High: \(.high) Low: \(.low) Buy: \(.buy) Sell: \(.sell) Last: \(.last)"')
+FORMATTED_DATA=$(echo "$RESPONSE" | jq '.[] | "\(.pair) -  High: \(.high), Low: \(.low), Buy: \(.buy), Sell: \(.sell), Last: \(.last)"')
 
-echo "$FORMATTED_DATA"
+
+# Uncomment below if yout want to send iMessage using apple shortcuts
+# CURRENT_DATE=$(date +%s)
+# FILE_NAME="/tmp/${CURRENT_DATE}.txt"
+# echo "$FORMATTED_DATA" >> "$FILE_NAME"
+# $(shortcuts run "Send Crypto Tickers" -i "$FILE_NAME")
+
+# Comment below if you are using apple shortcuts
 osascript message.applescript "$DESTINATION" "$FORMATTED_DATA"
