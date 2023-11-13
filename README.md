@@ -1,4 +1,4 @@
-## Fetch Crypto Tickers from Mercado Bitcoin API and send as message with Apple Messages App.
+## Fetch Crypto Tickers from Mercado Bitcoin's API and send as message with Apple Messages App.
 
 
 # Prerequesites
