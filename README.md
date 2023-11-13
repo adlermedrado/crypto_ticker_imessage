@@ -19,7 +19,7 @@
 
 You can pass any pair separated by colons, as the example above.
 
-All supported pais: https://api.mercadobitcoin.net/api/v4/symbols (It is a JSON response)
+All supported pairs: https://api.mercadobitcoin.net/api/v4/symbols (It's a JSON response)
 
 # Integration with Messages App
 
